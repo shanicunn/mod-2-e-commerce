@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import scriptLoader from 'react-async-script-loader';
 import PropTypes from 'prop-types';
  
+// https://www.robinwieruch.de/react-paypal-payment
 // https://cubettech.com/resources/blog/integrating-paypal-rest-api-with-react-js/
 class PaypalButton extends React.Component {
   constructor(props) {
@@ -13,8 +14,8 @@ class PaypalButton extends React.Component {
       showButton: false,
       env: 'sandbox', // Or 'sandbox'
       client: {
-        sandbox:    'xxxxxxxxx', // sandbox client ID
-        production: 'xxxxxxxxx' // production client ID
+        sandbox:    process.env.PAYPAL_CLIENT_ID_SANDBOX, // sandbox client ID
+        production: process.env.PAYPAL_CLIENT_ID_PRODUCTION // production client ID
       },
       commit: true, // Show a 'Pay Now' button
     };
