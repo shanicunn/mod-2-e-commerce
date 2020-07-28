@@ -19,14 +19,14 @@ export default class MyApp extends React.Component {
         }		            
         let currency = 'USD'; // or you can set this value from your props or state   
         let total = 1; // same as above, this is the total amount (based on currency) to be paid by using Paypal express checkout 
- return (
+        return (
             <PaypalExpressBtn 
-currency={currency}
-total={total}
-onError={onError}
-onSuccess={onSuccess}
-onCancel={onCancel}
- />
+                currency={currency}
+                total={total}
+                onError={onError}
+                onSuccess={onSuccess}
+                onCancel={onCancel}
+                />
         );
     }  
  }
